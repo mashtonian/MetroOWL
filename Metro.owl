@@ -1,0 +1,1179 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#"
+     xml:base="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12">
+        <rdfs:comment>An ontology for my model of the Rome Metro system.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasStation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isOriginOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasStation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasStation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasTerminus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasTerminus">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasStation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isTerminusOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isAfter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isAfter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isBefore"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isBefore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isBefore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isColourOfLine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isColourOfLine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#lineColour"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isColourOfStation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isColourOfStation">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#stationColour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isOriginOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isOriginOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isTerminusOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isTerminusOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#lineColour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#lineColour">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#nextAfter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#nextAfter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#previousTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#previousTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#previousTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#stationColour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#stationColour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#carriagesPerTrain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#carriagesPerTrain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#dateBuilt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#dateBuilt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#dateOpened -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#dateOpened">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasColourCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasColourCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasNumberOfEntrances -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasNumberOfEntrances">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasNumberOfStations -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasNumberOfStations">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasPaymentZone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasPaymentZone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasTicketOffice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#hasTicketOffice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isBranched -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isBranched">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isWheelchairAccessible -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isWheelchairAccessible">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#openPeakTimeOnly -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#openPeakTimeOnly">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#trainsPerHour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#trainsPerHour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isColourOfLine"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#InterchangeStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#InterchangeStation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#nextAfter"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#previousTo"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedStation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedStation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedLine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedLine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedStation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#OriginStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#OriginStation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isOriginOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#TerminusStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#TerminusStation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isTerminusOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Line"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Anagnina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Anagnina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <isTerminusOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA"/>
+        <onLine rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Annibaliano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Annibaliano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Bologna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Arco_di_Travertino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Arco_di_Travertino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <onLine rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Porta_Furba_-_Quadraro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Baldo_degli_Ubaldi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Baldo_degli_Ubaldi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Valle_Aurelia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Basilica_S._Paolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Basilica_S._Paolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Marconi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Battistini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Battistini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <isOriginOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cornelia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Blue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Blue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Bologna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Bologna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Policlinico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Castro_Pretorio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Castro_Pretorio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Termini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cavour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cavour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colosseo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cinecittà -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cinecittà">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Anagnina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cipro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cipro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ottaviano_–_San_Pietro_–_Musei_Vaticani"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Circo_Massimo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Circo_Massimo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Piramide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colli_Albani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colli_Albani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Arco_di_Travertino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colosseo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colosseo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Circo_Massimo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cornelia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cornelia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Baldo_degli_Ubaldi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Fermi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Fermi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Laurentina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Magliana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Magliana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Palasport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Palasport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Palasport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Fermi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Flaminio_-_Piazza_del_Popolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Flaminio_-_Piazza_del_Popolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Spagna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Furio_Camillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Furio_Camillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colli_Albani"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Garbatella -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Garbatella">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Basilica_S._Paolo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Giulio_Agricola -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Giulio_Agricola">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Subaugusta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Laurentina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Laurentina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <isTerminusOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lepanto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lepanto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Flaminio_-_Piazza_del_Popolo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Libia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Libia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Annibaliano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedLine"/>
+        <lineColour rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Red"/>
+        <hasNumberOfStations rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</hasNumberOfStations>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedLine"/>
+        <lineColour rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Blue"/>
+        <hasNumberOfStations rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasNumberOfStations>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lucio_Sestio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lucio_Sestio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Giulio_Agricola"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Marconi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Marconi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Magliana"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Monti_Tiburtini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Monti_Tiburtini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Quintiliani"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Numidio_Quadrato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Numidio_Quadrato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lucio_Sestio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Pietralata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Pietralata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Monti_Tiburtini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Piramide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Piramide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Garbatella"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Policlinico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Policlinico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Castro_Pretorio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Lungo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Lungo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Furio_Camillo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Mammolo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Mammolo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Santa_Maria_del_Soccorso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Porta_Furba_-_Quadraro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Porta_Furba_-_Quadraro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Numidio_Quadrato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Quintiliani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Quintiliani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Tiburtina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Re_di_Roma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Re_di_Roma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Lungo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Rebibbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Rebibbia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <isOriginOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Mammolo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Red -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Red">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#San_Giovanni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#San_Giovanni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Re_di_Roma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Santa_Maria_del_Soccorso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Santa_Maria_del_Soccorso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Pietralata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Spagna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Spagna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Barberini_–_Fontana_di_Trevi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Subaugusta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Subaugusta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cinecittà"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Termini -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Termini">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#NamedStation"/>
+        <onLine rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA"/>
+        <onLine rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cavour"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Vittorio_Emanuele"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Tiburtina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Tiburtina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Bologna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Valle_Aurelia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Valle_Aurelia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cipro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Vittorio_Emanuele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Vittorio_Emanuele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Manzoni_–_Museo_della_Liberazione"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Barberini_–_Fontana_di_Trevi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Barberini_–_Fontana_di_Trevi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Repubblica_-_Teatro_dell&apos;Opera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Conca_d&apos;Oro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Conca_d&apos;Oro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineBStations"/>
+        <isOriginOf rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Libia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Manzoni_–_Museo_della_Liberazione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Manzoni_–_Museo_della_Liberazione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#San_Giovanni"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ottaviano_–_San_Pietro_–_Musei_Vaticani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ottaviano_–_San_Pietro_–_Musei_Vaticani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lepanto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Repubblica_-_Teatro_dell&apos;Opera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Repubblica_-_Teatro_dell&apos;Opera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineAStations"/>
+        <previousTo rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Termini"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Anagnina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Annibaliano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Arco_di_Travertino"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Baldo_degli_Ubaldi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Basilica_S._Paolo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Battistini"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Bologna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Castro_Pretorio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cavour"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cinecittà"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cipro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Circo_Massimo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colli_Albani"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Colosseo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Cornelia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Fermi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Magliana"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#EUR_Palasport"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Flaminio_-_Piazza_del_Popolo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Furio_Camillo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Garbatella"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Giulio_Agricola"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Laurentina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lepanto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Libia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Lucio_Sestio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Marconi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Monti_Tiburtini"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Numidio_Quadrato"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Pietralata"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Piramide"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Policlinico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Lungo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ponte_Mammolo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Porta_Furba_-_Quadraro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Quintiliani"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Re_di_Roma"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Rebibbia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#San_Giovanni"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Santa_Maria_del_Soccorso"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Spagna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Subaugusta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Termini"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Tiburtina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Valle_Aurelia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Vittorio_Emanuele"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Barberini_–_Fontana_di_Trevi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Conca_d&apos;Oro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Manzoni_–_Museo_della_Liberazione"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Ottaviano_–_San_Pietro_–_Musei_Vaticani"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Repubblica_-_Teatro_dell&apos;Opera"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineA"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#LineB"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#l">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Colour</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#onLine"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#l"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#lineColour"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#l"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#stationColour"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stations After</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#Station"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#nextAfter"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#s"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#isAfter"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#s"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/mashton/ontologies/2022/3/untitled-ontology-12#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
