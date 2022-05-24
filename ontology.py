@@ -95,5 +95,5 @@ SELECT ?x ?y where
     print("Query: ")
     print(sparql)
     print()
-    print(list(terminii)[0])
+    print(list(terminii))
     pause_for_menu()
